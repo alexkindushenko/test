@@ -1,14 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { clearState } from '../../actions';
 
 import './buttons-row.css';
 
-const ButtonsRow = () => {
+const ButtonsRow = ({ clearState }) => {
   return (
     <div className="d-flex justify-content-center buttons-row">
       <button
         type="reset"
         className="btn btn-outline-info"
-        onClick={() => localStorage.clear()}
+        onClick={() => clearState()}
       >
         Reset
       </button>
@@ -19,4 +23,16 @@ const ButtonsRow = () => {
   );
 };
 
-export default ButtonsRow;
+const mapDispachToProps = dispatch => {
+  return bindActionCreators(
+    {
+      clearState,
+    },
+    dispatch
+  );
+};
+
+export default connect(
+  () => ({}),
+  mapDispachToProps
+)(ButtonsRow);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import './ask-form.css';
 import ButtonsRow from '../buttons-row';
@@ -9,15 +9,18 @@ import CheckRow from '../check-row';
 
 const AskForm = () => {
   return (
-    <div className="ask-form">
-      <form>
-        <TextRow />
-        <SelectRow />
-        <RadioRow />
-        <CheckRow />
-        <ButtonsRow />
-      </form>
-    </div>
+    <Fragment>
+      <h1 className="display-4 head-ask">Опросник с истории</h1>
+      <div className="ask-form">
+        <form>
+          <TextRow />
+          <SelectRow />
+          <RadioRow />
+          <CheckRow />
+          <ButtonsRow />
+        </form>
+      </div>
+    </Fragment>
   );
 };
 

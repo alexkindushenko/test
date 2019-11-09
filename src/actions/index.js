@@ -26,9 +26,16 @@ const getValueCheckInput = id => {
   };
 };
 
+const clearState = () => {
+  return {
+    type: 'CLEAR_STATE',
+  };
+};
+
 export {
   getValueTextInput,
   getValueSelectInput,
   getValueRadioInput,
   getValueCheckInput,
+  clearState,
 };
