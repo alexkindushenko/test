@@ -83,7 +83,7 @@ class AnswerPage extends Component {
         </div>
       );
     }
-    return <h1>ANSVER PAGE</h1>;
+    return <p>{''}</p>;
   }
 }
 

@@ -16,7 +16,7 @@ const TextRow = ({ textInputTwoVal, getValueTextInputTwo }) => {
           type="email"
           className="form-control"
           id="textRow"
-          placeholder="Президент США"
+          placeholder="Премьер великобритании"
           value={textInputTwoVal || ''}
         ></input>
       </div>

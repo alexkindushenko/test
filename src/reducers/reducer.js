@@ -94,8 +94,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(action.type);
-
   switch (action.type) {
     case 'GET_VALUE_TEXT_INPUT':
       return getValueTextInput(state, action.payload);

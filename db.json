@@ -1,0 +1,15 @@
+{
+  "formData": [
+    {
+      "textInputVal": "Рузвельт",
+      "textInputTwoVal": "Черчиль",
+      "selectInputVal": "1914",
+      "radioInputVal": "1918",
+      "checkInputVal": [
+        "1939",
+        "1945"
+      ],
+      "id": 1
+    }
+  ]
+}

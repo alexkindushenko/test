@@ -11,7 +11,7 @@ import TextRowTwo from '../text-row-two';
 const AskForm = () => {
   return (
     <Fragment>
-      <h1 className="display-4 head-ask">Опросник с истории</h1>
+      <h1 className="display-4 head-ask text-center">Опросник с истории</h1>
       <div className="ask-form">
         <form>
           <TextRow />
