@@ -2,38 +2,38 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { getValueTextInput } from '../../actions';
+import { getValueTextInputTwo } from '../../actions';
 
-const TextRow = ({ textInputVal, getValueTextInput }) => {
+const TextRow = ({ textInputTwoVal, getValueTextInputTwo }) => {
   return (
     <div className="input-wraper">
       <div className="form-group">
         <label htmlFor="textRow">
-          Кто был президентом США в 1933-1945 годах?
+          Кто был премьер-министром Великобритании 1940-1945 годах?
         </label>
         <input
-          onChange={e => getValueTextInput(e.target.value)}
+          onChange={e => getValueTextInputTwo(e.target.value)}
           type="email"
           className="form-control"
           id="textRow"
           placeholder="Президент США"
-          value={textInputVal || ''}
+          value={textInputTwoVal || ''}
         ></input>
       </div>
     </div>
   );
 };
 
-const mapStateToProps = ({ textInputVal }) => {
+const mapStateToProps = ({ textInputTwoVal }) => {
   return {
-    textInputVal,
+    textInputTwoVal,
   };
 };
 
 const mapDispachToProps = dispatch => {
   return bindActionCreators(
     {
-      getValueTextInput,
+      getValueTextInputTwo,
     },
     dispatch
   );

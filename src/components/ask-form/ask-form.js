@@ -6,6 +6,7 @@ import TextRow from '../text-row';
 import SelectRow from '../select-row';
 import RadioRow from '../radio-row';
 import CheckRow from '../check-row';
+import TextRowTwo from '../text-row-two';
 
 const AskForm = () => {
   return (
@@ -14,6 +15,7 @@ const AskForm = () => {
       <div className="ask-form">
         <form>
           <TextRow />
+          <TextRowTwo />
           <SelectRow />
           <RadioRow />
           <CheckRow />

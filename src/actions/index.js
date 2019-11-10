@@ -4,6 +4,12 @@ const getValueTextInput = value => {
     payload: value,
   };
 };
+const getValueTextInputTwo = value => {
+  return {
+    type: 'GET_VALUE_TEXT_INPUT_TWO',
+    payload: value,
+  };
+};
 
 const getValueSelectInput = value => {
   return {
@@ -32,10 +38,18 @@ const clearState = () => {
   };
 };
 
+const hasWarnOff = () => {
+  return {
+    type: 'HAS_WARN',
+  };
+};
+
 export {
   getValueTextInput,
+  getValueTextInputTwo,
   getValueSelectInput,
   getValueRadioInput,
   getValueCheckInput,
   clearState,
+  hasWarnOff,
 };

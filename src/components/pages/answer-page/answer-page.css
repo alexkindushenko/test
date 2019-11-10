@@ -1,0 +1,11 @@
+.head-answer {
+    margin: 2rem;
+}
+
+.corect {
+    background: rgb(183, 241, 124);
+}
+
+.mistake {
+    background: rgb(230, 166, 166);
+}

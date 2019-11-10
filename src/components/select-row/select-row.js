@@ -8,18 +8,18 @@ const SelectRow = ({ selectInputVal, getValueSelectInput }) => {
   return (
     <div className="input-wraper">
       <div className="form-group">
-        <label htmlFor="Select1">Example select</label>
+        <label htmlFor="Select1">В каком году началась 1 мировая война?</label>
         <select
           className="form-control"
           id="Select1"
           onChange={e => getValueSelectInput(e.target.value)}
           defaultValue={selectInputVal}
         >
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
+          <option value={'1912'}>1912</option>
+          <option value={'1914'}>1914</option>
+          <option value={'1916'}>1916</option>
+          <option value={'1918'}>1918</option>
+          <option value={'1920'}>1920</option>
         </select>
       </div>
     </div>

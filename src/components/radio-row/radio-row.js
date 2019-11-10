@@ -7,6 +7,7 @@ import { getValueRadioInput } from '../../actions';
 const RadioRow = ({ arrRadioInput, radioInputVal, getValueRadioInput }) => {
   return (
     <div className="input-wraper">
+      <p>В каком году закончилась 1 мировая война?</p>
       {arrRadioInput.map((el, idx) => {
         return (
           <div key={idx} className="form-check">

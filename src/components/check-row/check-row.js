@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { getValueCheckInput } from '../../actions';
 
-const CheckRow = ({ arrCheckInput, checkInputVal, getValueCheckInput }) => {
+const CheckRow = ({ arrCheckInput, getValueCheckInput }) => {
   const mapCheck = arr => {
     return arr.map((el, idx) => {
       return (
@@ -26,7 +26,7 @@ const CheckRow = ({ arrCheckInput, checkInputVal, getValueCheckInput }) => {
 
   return (
     <div className="input-wraper">
-      <p>Начало и конец второй мировой войны.</p>
+      <p>Начало и конец второй мировой войны?</p>
       {mapCheck(arrCheckInput)}
     </div>
   );

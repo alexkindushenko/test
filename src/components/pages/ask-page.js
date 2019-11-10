@@ -1,19 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import AskForm from '../ask-form';
 import Popup from '../popup';
 
-class AskPage extends React.Component {
-  state = {
-    hasWarn: false,
+const AskPage = ({ hasWarn }) => {
+  if (hasWarn) return <Popup />;
+  return <AskForm />;
+};
+
+const mapStateToProps = ({ hasWarn }) => {
+  return {
+    hasWarn,
   };
+};
 
-  turnOff = () => this.setState({ hasWarn: false });
-
-  render() {
-    if (this.state.hasWarn) return <Popup turnOff={this.turnOff} />;
-    return <AskForm />;
-  }
-}
-
-export default AskPage;
+export default connect(mapStateToProps)(AskPage);
