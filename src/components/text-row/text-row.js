@@ -5,6 +5,10 @@ import { bindActionCreators } from 'redux';
 import { getValueTextInput } from '../../actions';
 
 const TextRow = ({ textInputVal, getValueTextInput }) => {
+  const getValue = e => {
+    getValueTextInput(e.target.value);
+    localStorage.setItem('textInputVal', e.target.value);
+  };
   return (
     <div className="input-wraper">
       <div className="form-group">
@@ -12,7 +16,7 @@ const TextRow = ({ textInputVal, getValueTextInput }) => {
           Кто был президентом США в 1933-1945 годах?
         </label>
         <input
-          onChange={e => getValueTextInput(e.target.value)}
+          onChange={e => getValue(e)}
           type="email"
           className="form-control"
           id="textRow"

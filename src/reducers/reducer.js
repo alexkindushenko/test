@@ -75,8 +75,8 @@ const hasWarnOff = state => {
   };
 };
 const initialState = {
-  textInputVal: '',
-  textInputTwoVal: '',
+  textInputVal: localStorage.getItem('textInputVal') || '',
+  textInputTwoVal: localStorage.getItem('textInputTwoVal') || '',
   selectInputVal: '1912',
   radioInputVal: null,
   arrRadioInput: [
