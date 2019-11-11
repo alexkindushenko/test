@@ -5,13 +5,21 @@ import { bindActionCreators } from 'redux';
 import { getValueCheckInput } from '../../actions';
 
 const CheckRow = ({ arrCheckInput, getValueCheckInput }) => {
+  const getCheck = val => {
+    localStorage.setItem('valCheckInput' + val, val);
+    getValueCheckInput(val);
+  };
+
   const mapCheck = arr => {
     return arr.map((el, idx) => {
+      const myCheck = localStorage.getItem('valCheckInput' + el.val)
+        ? true
+        : false;
       return (
         <div key={idx} className="form-check">
           <input
-            checked={el.check}
-            onChange={() => getValueCheckInput(el.val)}
+            checked={myCheck}
+            onChange={() => getCheck(el.val)}
             className="form-check-input"
             type="checkbox"
             id={el.val}

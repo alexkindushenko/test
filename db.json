@@ -1,8 +1,7 @@
 {
-  "formData": [
-    {
+  "formData": [{
       "textInputVal": "Рузвельт",
-      "textInputTwoVal": "Черчиль",
+      "textInputTwoVal": "черчиль",
       "selectInputVal": "1914",
       "radioInputVal": "1918",
       "checkInputVal": [
@@ -10,22 +9,7 @@
         "1945"
       ],
       "id": 1
-    },
-    {
-      "textInputVal": "",
-      "textInputTwoVal": "kkkkb",
-      "selectInputVal": "1912",
-      "radioInputVal": null,
-      "checkInputVal": [],
-      "id": 2
-    },
-    {
-      "textInputVal": "kiiin",
-      "textInputTwoVal": "kkkkb",
-      "selectInputVal": "1912",
-      "radioInputVal": null,
-      "checkInputVal": [],
-      "id": 3
     }
+
   ]
 }

@@ -17,7 +17,7 @@ const TextRow = ({ textInputVal, getValueTextInput }) => {
         </label>
         <input
           onChange={e => getValue(e)}
-          type="email"
+          type="text"
           className="form-control"
           id="textRow"
           placeholder="Президент США"

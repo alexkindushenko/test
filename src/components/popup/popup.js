@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-import { hasWarnOff } from '../../actions';
+import { hasWarnOff, clearState } from '../../actions';
 import './popup.css';
 
 class Popup extends React.Component {
@@ -20,6 +20,7 @@ class Popup extends React.Component {
       radioInputVal,
       checkInputVal,
       hasWarnOff,
+      clearState,
     } = this.props;
 
     const onSubmit = e => {
@@ -34,6 +35,7 @@ class Popup extends React.Component {
         })
         .then(() => {
           this.setState({ redirect: true });
+          clearState();
         });
     };
 
@@ -90,6 +92,7 @@ const mapDispachToProps = dispatch => {
   return bindActionCreators(
     {
       hasWarnOff,
+      clearState,
     },
     dispatch
   );

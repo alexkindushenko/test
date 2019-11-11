@@ -5,6 +5,11 @@ import { bindActionCreators } from 'redux';
 import { getValueSelectInput } from '../../actions';
 
 const SelectRow = ({ selectInputVal, getValueSelectInput }) => {
+  const getValue = e => {
+    getValueSelectInput(e.target.value);
+    localStorage.setItem('textSelectVal', e.target.value);
+  };
+
   return (
     <div className="input-wraper">
       <div className="form-group">
@@ -12,8 +17,8 @@ const SelectRow = ({ selectInputVal, getValueSelectInput }) => {
         <select
           className="form-control"
           id="Select1"
-          onChange={e => getValueSelectInput(e.target.value)}
-          defaultValue={selectInputVal}
+          onChange={e => getValue(e)}
+          value={selectInputVal}
         >
           <option value={'1912'}>1912</option>
           <option value={'1914'}>1914</option>

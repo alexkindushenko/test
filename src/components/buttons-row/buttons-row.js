@@ -57,7 +57,7 @@ class ButtonsRow extends React.Component {
     return (
       <div className="d-flex justify-content-center buttons-row">
         <button
-          type="reset"
+          type="button"
           className="btn btn-outline-info"
           onClick={() => clearState()}
         >

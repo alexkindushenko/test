@@ -5,6 +5,11 @@ import { bindActionCreators } from 'redux';
 import { getValueRadioInput } from '../../actions';
 
 const RadioRow = ({ arrRadioInput, radioInputVal, getValueRadioInput }) => {
+  const getValue = e => {
+    getValueRadioInput(e.target.value);
+    localStorage.setItem('textDadiotVal', e.target.value);
+  };
+
   return (
     <div className="input-wraper">
       <p>В каком году закончилась 1 мировая война?</p>
@@ -13,7 +18,7 @@ const RadioRow = ({ arrRadioInput, radioInputVal, getValueRadioInput }) => {
           <div key={idx} className="form-check">
             <input
               checked={el.check}
-              onChange={e => getValueRadioInput(e.target.value)}
+              onChange={e => getValue(e)}
               className="form-check-input"
               type="radio"
               name="Radios"
